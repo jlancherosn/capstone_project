@@ -13,11 +13,11 @@ This project was effective calculating the metrics related with the monthly aggr
 ## Installations
 You can run this poject downloading the app, data and model folders in a root directory in your local machine so your folder have the next structure:
 
-root directory/
-├──app/
-|  ├──templates/
-|     ├──master.html
-|  run.py
+root directory/\\
+├──app/\\
+|  ├──templates/\\
+|     ├──master.html\\
+|  run.py\\
 ├──data/
 |  ├──losses.csv
 |  ├──process_data.py
