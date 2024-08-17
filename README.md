@@ -17,16 +17,20 @@ root directory/
 
 ├──app/
 
-|  ├──templates/
+|      ├──templates/
 
-|     ├──master.html
+|                  ├──master.html
 
-|  run.py\\
+|      run.py
 ├──data/
-|  ├──losses.csv
-|  ├──process_data.py
+
+|      ├──losses.csv
+
+|      ├──process_data.py
+
 ├──model/
-|  ├──model.py
+
+|      ├──model.py
 
 The app folder directory the html and python files to deploy de web app. The data directory has the data and the python file to preproccess it, and in the model folder the python file with the code to do the Monte Carlo simulations.
 
