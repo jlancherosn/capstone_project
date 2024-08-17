@@ -15,22 +15,23 @@ You can run this poject downloading the app, data and model folders in a root di
 
 root directory/
 
-├──app/
+|--app/
 
-|      ├──templates/
+|------templates/
 
-|                  ├──master.html
+|----------------master.html
 
-|      run.py
-├──data/
+|-------run.py
 
-|      ├──losses.csv
+|--data/
 
-|      ├──process_data.py
+|-------losses.csv
 
-├──model/
+|-------process_data.py
 
-|      ├──model.py
+|--model/
+
+|-------model.py
 
 The app folder directory the html and python files to deploy de web app. The data directory has the data and the python file to preproccess it, and in the model folder the python file with the code to do the Monte Carlo simulations.
 
