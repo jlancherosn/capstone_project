@@ -29,14 +29,26 @@ Given that financial institutions need to predict and manage risk, the combinati
 ## Approach and Methodology
 To address the problem of predicting economic losses due to financial risks, we employ an Aggregate Loss Distribution Approach. This approach involves combining the frequency and severity distributions of financial losses to model the total loss distribution effectively. The methodology includes the following steps:
 
-**Frequency Distribution:**
+**1. Frequency Distribution:**
 
 This represents the number of financial loss events occurring over a specific period. It can be modeled using various statistical distributions, such as Poisson or Negative Binomial distributions, depending on the nature of the data.
-Severity Distribution:
+
+**2. Severity Distribution:**
 
 This represents the magnitude of losses associated with each event. Common distributions used for modeling severity include the Exponential, Gamma, or Pareto distributions, depending on the characteristics of the loss data.
-Convolution of Distributions:
+
+**3. Convolution of Distributions:**
 
 The total loss distribution is obtained by convolving the frequency and severity distributions. Mathematically, if $F(x)$ represents the cumulative distribution function (CDF) of the frequency distribution and $S(x)$ represents the CDF of the severity distribution, the convolution can be expressed as:
 
 $$L(x) = \int_{0}^{x} f(x - y) \dot s(y) dy$$
+{
+where $f(x)$ is the probability density function (PDF) of the frequency distribution and s(x) is the PDF of the severity distribution. This integral calculates the total loss distribution by combining the frequency and severity data.
+
+**4. Monte Carlo Simulations:**
+
+To estimate the aggregate loss distribution, Monte Carlo simulations are used. This involves generating a large number of random samples based on the frequency and severity distributions and then calculating the total loss for each sample. The Monte Carlo approach allows us to approximate the aggregate loss distribution by repeatedly simulating various scenarios.
+
+Mathematically, if $N$ represents the number of simulations, and each simulation generates a loss value $L_{i}$, the aggregate loss distribution can be approximated by:
+
+$$\hat{L} = /dfrac{1}{N} \sum_{i=1}^{N} \mathbb{I}(L_{i} < x)$$
