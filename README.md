@@ -130,3 +130,36 @@ The proposed solution successfully integrates statistical modeling with Monte Ca
 * Adaptability: The model's flexibility to accommodate different datasets and underlying distributions makes it a valuable tool for diverse financial contexts. This adaptability enables its application to various types of financial risks and loss scenarios.
 
 In summary, the project demonstrates a successful approach to modeling economic losses, providing valuable insights for risk management and financial planning. The findings underscore the importance of comprehensive data and advanced tools in creating effective predictive models.
+
+## Improvements
+
+**Limitations and Challenges**
+While the current model provides a robust framework for predicting economic losses, there are some limitations and challenges that could be addressed in future iterations:
+
+* Fixed Periodicity:
+
+The model currently operates with a fixed periodicity, specifically on a monthly basis. This limitation may not capture the nuances of data that vary over different time frames, such as weekly or quarterly losses.
+Lack of Category-Specific Analysis:
+
+The model does not yet account for different categories of losses, such as losses segmented by type of risk (e.g., credit, market, operational). This limits the ability to perform more granular analysis and predictions for specific types of financial events.
+
+* Limited Visualizations:
+
+While the application provides basic visualizations, there is room for improvement by adding more sophisticated and informative visualizations. These could help in better interpreting the results and communicating insights to stakeholders.
+
+**Potential Enhancements and Future Directions**
+
+* Flexible Periodicity:
+
+In future versions, the project could be enhanced by allowing for flexibility in the periodicity of analysis. By incorporating different time frames (weekly, quarterly, annually), the model would be better suited to various financial scenarios and could provide more accurate predictions depending on the context.
+
+* Category-Specific Calculations:
+
+Another improvement would be to introduce category-specific calculations. By segmenting the data into relevant categories (e.g., type of loss, geographical region, market sector), the model could deliver more targeted insights. This would allow institutions to better understand and manage risks in different areas of their operations.
+
+* Enhanced Visualizations:
+
+Developing additional visualizations would greatly benefit the application. For instance, incorporating interactive dashboards, time-series plots, and distribution comparisons could provide users with a deeper understanding of the model's outputs. Enhanced visualizations would also make the model more user-friendly and easier to interpret for non-technical stakeholders.
+
+**Conclusion**
+By addressing these limitations and implementing the suggested enhancements, the project can be further improved to offer a more flexible, detailed, and user-friendly tool for predicting and managing financial losses. These improvements would not only increase the model's accuracy but also its applicability across a wider range of financial scenarios, making it an even more valuable resource for risk management and decision-making.
