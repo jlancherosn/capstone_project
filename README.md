@@ -42,7 +42,7 @@ This represents the magnitude of losses associated with each event. Common distr
 The total loss distribution is obtained by convolving the frequency and severity distributions. Mathematically, if $F(x)$ represents the cumulative distribution function (CDF) of the frequency distribution and $S(x)$ represents the CDF of the severity distribution, the convolution can be expressed as:
 
 $$L(x) = \int_{0}^{x} f(x - y) \dot s(y) dy$$
-{
+
 where $f(x)$ is the probability density function (PDF) of the frequency distribution and s(x) is the PDF of the severity distribution. This integral calculates the total loss distribution by combining the frequency and severity data.
 
 **4. Monte Carlo Simulations:**
@@ -51,4 +51,4 @@ To estimate the aggregate loss distribution, Monte Carlo simulations are used. T
 
 Mathematically, if $N$ represents the number of simulations, and each simulation generates a loss value $L_{i}$, the aggregate loss distribution can be approximated by:
 
-$$\hat{L} = /dfrac{1}{N} \sum_{i=1}^{N} \mathbb{I}(L_{i} < x)$$
+$$\hat{L} = \frac{1}{N} \sum_{i=1}^{N} \mathbb{I}(L_{i} < x)$$
