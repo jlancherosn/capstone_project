@@ -82,9 +82,9 @@ The proposed solution involves developing a comprehensive model to predict econo
 
 **Monte Carlo Simulation**
 * Simulation Setup: Define the number of Monte Carlo simulations to be performed. For each simulation:
-** Simulate Number of Events: Generate a random number of events based on the frequency distribution.
-** Simulate Loss Amounts: Generate loss amounts for each event based on the severity distribution.
-** Calculate Total Loss: Aggregate the loss amounts for each simulation run.
+Simulate Number of Events: Generate a random number of events based on the frequency distribution.
+Simulate Loss Amounts: Generate loss amounts for each event based on the severity distribution.
+Calculate Total Loss: Aggregate the loss amounts for each simulation run.
 * Aggregate Loss Distribution: Approximate the total loss distribution using the empirical distribution of the simulated total losses.
 
 **Model Evaluation**
@@ -102,4 +102,5 @@ The proposed solution involves developing a comprehensive model to predict econo
 * Results Interpretation and Application leverage the evaluated model to offer practical insights and recommendations for risk management.
   
 **Achieving the Desired Outcome**
+
 The integrated workflow allows for the accurate prediction of economic losses by combining theoretical models with practical simulations. By fitting frequency and severity distributions and using Monte Carlo simulations, the solution provides a robust method to estimate potential losses, ultimately supporting informed decision-making and risk management in financial institutions.
