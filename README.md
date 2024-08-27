@@ -209,10 +209,15 @@ This project was developed with Python 3.10.8 and the next versions of the next 
 * `SQLAlchemy 2.0.32` (see installation command below)
 
 To install the libraries please run these commands in your root directory:
+
 ``pip install -U distfit``
+
 ``pip install flask``
+
 ``pip install plotly==5.23.0``
+
 ``pip install scikit-learn``
+
 ``pip install sqlalchemy``
 
 # Deploy instructions
