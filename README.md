@@ -62,3 +62,6 @@ The aggregate loss distribution is then approximated by the empirical distributi
 $$\hat{L}(x) = \frac{1}{N} \sum_{i=1}^{N} \mathbb{I}(T_{i} \leq x)$$
 
 where $\mathbb{I}(T_{i} \leq x)$ is an indicator function that equals $1$ if $T_i$ is less than or equal to $x$ and $0$ otherwise. This approximation helps in estimating the probability of various levels of aggregate losses.
+
+**Rationale Behind the Approach**
+The Aggregate Loss Distribution Approach effectively models complex loss scenarios by integrating different aspects of loss events. Convolution provides a way to combine frequency and severity data into a single distribution, and Monte Carlo simulations offer a practical method to approximate this distribution, especially when analytical solutions are complex or infeasible.
