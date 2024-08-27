@@ -53,15 +53,7 @@ Monte Carlo simulations are used to estimate the aggregate loss distribution by 
 2. Simulate Loss Amounts: For each event, draw random loss amounts from the severity distribution.
 3. Aggregate Loss Calculation: Sum the loss amounts for each simulation run to compute the total loss.
    
-Mathematically, if $N$ represents the number of simulations, $E_{i}$ is the number of events in the $i-th$ simulation, and ${L_{i, j}}_{j=1}{E_i}$
-
- 
-​
-  are the simulated loss amounts for the 
-𝑖
-i-th simulation, the total loss for the 
-𝑖
-i-th simulation can be expressed as:
+Mathematically, if $N$ represents the number of simulations, $E_{i}$ is the number of events in the $i-th$ simulation, and $\{L_{i, j}\}_{j=1}{E_i}$ are the simulated loss amounts for the $i-th$ simulation, the total loss for the $i-th$ simulation can be expressed as:
 
 $$\hat{L}(x) = \frac{1}{N} \sum_{i=1}^{N} \mathbb{I}(L_{i} \leq x)$$
 
