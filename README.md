@@ -51,4 +51,6 @@ To estimate the aggregate loss distribution, Monte Carlo simulations are used. T
 
 Mathematically, if $N$ represents the number of simulations, and each simulation generates a loss value $L_{i}$, the aggregate loss distribution can be approximated by:
 
-$$\hat{L} = \frac{1}{N} \sum_{i=1}^{N} \mathbb{I}(L_{i} < x)$$
+$$\hat{L}(x) = \frac{1}{N} \sum_{i=1}^{N} \mathbb{I}(L_{i} \leq x)$$
+
+where $\mathbb{I}(L_{i} \leq x)$ is an indicator function that equals $1$ if $L_i$ is less than or equal to $x$ and $0$ otherwise. This approximation helps in estimating the probability of various levels of aggregate losses.
