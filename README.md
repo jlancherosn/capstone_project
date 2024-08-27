@@ -47,9 +47,21 @@ where $f(x)$ is the probability density function (PDF) of the frequency distribu
 
 **4. Monte Carlo Simulations:**
 
-To estimate the aggregate loss distribution, Monte Carlo simulations are used. This involves generating a large number of random samples based on the frequency and severity distributions and then calculating the total loss for each sample. The Monte Carlo approach allows us to approximate the aggregate loss distribution by repeatedly simulating various scenarios.
+Monte Carlo simulations are used to estimate the aggregate loss distribution by generating random samples based on the frequency and severity distributions. The process involves the following steps:
 
-Mathematically, if $N$ represents the number of simulations, and each simulation generates a loss value $L_{i}$, the aggregate loss distribution can be approximated by:
+1. Simulate Number of Events: For each simulation run, draw a random number from the frequency distribution to determine the number of loss events.
+2. Simulate Loss Amounts: For each event, draw random loss amounts from the severity distribution.
+3. Aggregate Loss Calculation: Sum the loss amounts for each simulation run to compute the total loss.
+   
+Mathematically, if $N$ represents the number of simulations, $E_{i}$ is the number of events in the $i-th$ simulation, and ${L_{i, j}}_{j=1}{E_i}$
+
+ 
+​
+  are the simulated loss amounts for the 
+𝑖
+i-th simulation, the total loss for the 
+𝑖
+i-th simulation can be expressed as:
 
 $$\hat{L}(x) = \frac{1}{N} \sum_{i=1}^{N} \mathbb{I}(L_{i} \leq x)$$
 
