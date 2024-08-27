@@ -168,3 +168,51 @@ By addressing these limitations and implementing the suggested enhancements, the
 ## Acknowledgment
 
 We would like to express our sincere gratitude to the Python developer community, whose contributions to statistical libraries have been invaluable to the success of this project. Special thanks go to the creators and maintainers of the distfit library, which demonstrated excellent performance and was crucial in the development of the model. Their work has significantly enhanced our ability to fit statistical distributions and model economic losses with greater accuracy.
+
+# Installations
+
+You can run this poject downloading the app, data and model folders in a root directory in your local machine so your folder have the next structure:
+
+root directory/
+├──app/
+|  ├──templates/
+|     ├──master.html
+|  run.py
+├──data/
+|  ├──losses.csv
+|  ├──process_data.py
+├──model/
+|  ├──model.py
+
+The app folder directory the html and python files to deploy de web app. The data directory has the data and the python file to preproccess it, and in the model folder the python file with the code to do the Monte Carlo simulations.
+
+This project was developed with Python 3.10.8 and the next versions of the next libraries: 
+* `distfit 1.8.0` (see installation command below)
+* `Flask 3.0.3` (see installation command below)
+* `joblib 1.4.2`
+* `numpy 2.0.1`
+* `pandas 2.2.2`
+* `plotly 5.23.0` (see installation command below)
+* `pypickle 1.1.0`
+* `scikit-learn 1.5.1` (see installation command below) 
+* `scipy 1.14.0` 
+* `SQLAlchemy 2.0.32` (see installation command below)
+
+To install the libraries please run these commands in your root directory:
+``pip install -U distfit``
+``pip install flask``
+``pip install plotly==5.23.0``
+``pip install scikit-learn``
+``pip install sqlalchemy``
+
+# Deploy instructions
+1. Run the following commands in the root directory to set up the database and simulations.
+
+    - To run ETL pipeline that cleans data and stores in database
+        `python data/process_data.py data/losses.csv`
+    - To run statistical pipeline that fit frequency and severity probability distributions to data and save the monte carlo simulations
+        `python model/model.py`
+
+2. Go to `app` directory: `cd app`
+
+3. Run your web app: `python run.py`
