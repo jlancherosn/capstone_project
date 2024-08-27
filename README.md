@@ -162,4 +162,9 @@ Another improvement would be to introduce category-specific calculations. By seg
 Developing additional visualizations would greatly benefit the application. For instance, incorporating interactive dashboards, time-series plots, and distribution comparisons could provide users with a deeper understanding of the model's outputs. Enhanced visualizations would also make the model more user-friendly and easier to interpret for non-technical stakeholders.
 
 **Conclusion**
+
 By addressing these limitations and implementing the suggested enhancements, the project can be further improved to offer a more flexible, detailed, and user-friendly tool for predicting and managing financial losses. These improvements would not only increase the model's accuracy but also its applicability across a wider range of financial scenarios, making it an even more valuable resource for risk management and decision-making.
+
+## Acknowledgment
+
+We would like to express our sincere gratitude to the Python developer community, whose contributions to statistical libraries have been invaluable to the success of this project. Special thanks go to the creators and maintainers of the distfit library, which demonstrated excellent performance and was crucial in the development of the model. Their work has significantly enhanced our ability to fit statistical distributions and model economic losses with greater accuracy.
