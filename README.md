@@ -38,3 +38,4 @@ This represents the magnitude of losses associated with each event. Common distr
 Convolution of Distributions:
 
 The total loss distribution is obtained by convolving the frequency and severity distributions. Mathematically, if $F(x)$ represents the cumulative distribution function (CDF) of the frequency distribution and $S(x)$ represents the CDF of the severity distribution, the convolution can be expressed as:
+$L(x) = \integral _{0} x f(x - y) \dot s(y) dy$
