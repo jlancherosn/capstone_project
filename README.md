@@ -174,15 +174,25 @@ We would like to express our sincere gratitude to the Python developer community
 You can run this poject downloading the app, data and model folders in a root directory in your local machine so your folder have the next structure:
 
 root directory/
+
 ├──app/
+
 |  ├──templates/
+
 |     ├──master.html
+
 |  run.py
+
 ├──data/
+
 |  ├──losses.csv
+
 |  ├──process_data.py
+
 ├──model/
+
 |  ├──model.py
+
 
 The app folder directory the html and python files to deploy de web app. The data directory has the data and the python file to preproccess it, and in the model folder the python file with the code to do the Monte Carlo simulations.
 
