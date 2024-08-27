@@ -1,76 +1,40 @@
-# capstone_project
+# Capstone_project
 # Scenario quantification
 
-## Project definition
-With a base data of historical losses to calculate some metrics as the expected and catastrophical monthly losses.
+## Introduction
+The purpose of this project is to develop a statistical model to predict economic losses associated with financial risks, specifically credit, market, or operational risks. Financial institutions constantly face these risks, and their ability to measure and manage potential losses is crucial for ensuring financial stability.
 
-## Analysis
-To calculate the metrics we find the frequency and severity distributions that best fit the data with help of `distfit` library. In particular, the fitting of severity is did it taking as metric of evaluation the Kolmogorov Smirnov test with a 95% significance level. We have to calculate the convolution between frequency and severity distributions, for this convolution we do Monte Carlo simulations.
+## Problem Statement
+The main problem addressed in this project is the accurate prediction of economic losses due to financial risk events. Identifying the factors that influence these losses and developing a predictive model will enable institutions to make informed decisions to mitigate these risks.
 
-## Conclusions
-This project was effective calculating the metrics related with the monthly aggregated losses, you can use it with any losses data with two minimum fields, date and loss amount. **Please name your minimum fields as date and losses.**
+## Significance
+Managing financial risks is essential for institutions operating in highly volatile markets. By developing an efficient predictive model, potential losses can be estimated, allowing for proactive mitigation strategies. This not only improves financial stability but also optimizes capital allocation, ensuring institutions comply with regulatory requirements and maintain solvency.
 
-## Installations
-You can run this poject downloading the app, data and model folders in a root directory in your local machine so your folder have the next structure:
+## Dataset Overview
+The dataset used in this project is a CSV file containing two key columns: date and loss. These columns provide the minimum necessary information to operate the economic model for predicting financial losses.
 
-root directory/
+Source: The dataset is provided alongside the project code as an anonymized sample dataset. It functions as an illustrative example for building the economic model.
+Format: CSV file with two columns:
+date: The date of the recorded financial event.
+loss: The amount of financial loss associated with the event on the given date.
 
-|--app/
+## Variable Significance
+* date: This variable represents the time dimension of the financial loss data. It is essential for identifying trends or patterns in the occurrence of financial loss events over time, which could be important for making temporal predictions.
 
-|------templates/
+* loss: The loss variable quantifies the economic impact of each financial event. It is the primary dependent variable that the model aims to predict. Accurately modeling this variable allows financial institutions to anticipate potential losses and implement mitigation strategies accordingly.
 
-|----------------master.html
+## Importance to the Problem
+Given that financial institutions need to predict and manage risk, the combination of date and loss data provides a foundation for constructing a time-series model or other relevant statistical models. By analyzing historical loss data, the model can forecast future losses and help institutions prepare for potential financial downturns.
 
-|-------run.py
+## Approach and Methodology
+To address the problem of predicting economic losses due to financial risks, we employ an Aggregate Loss Distribution Approach. This approach involves combining the frequency and severity distributions of financial losses to model the total loss distribution effectively. The methodology includes the following steps:
 
-|--data/
+**Frequency Distribution:**
 
-|-------losses.csv
+This represents the number of financial loss events occurring over a specific period. It can be modeled using various statistical distributions, such as Poisson or Negative Binomial distributions, depending on the nature of the data.
+Severity Distribution:
 
-|-------process_data.py
+This represents the magnitude of losses associated with each event. Common distributions used for modeling severity include the Exponential, Gamma, or Pareto distributions, depending on the characteristics of the loss data.
+Convolution of Distributions:
 
-|--model/
-
-|-------model.py
-
-The app folder directory the html and python files to deploy de web app. The data directory has the data and the python file to preproccess it, and in the model folder the python file with the code to do the Monte Carlo simulations.
-
-This project was developed with Python 3.10.8 and the next versions of the next libraries:
-* `distfit 1.8.0` (see installation command below)
-* `Flask 3.0.3` (see installation command below)
-* `joblib 1.4.2`
-* `numpy 2.0.1`
-* `pandas 2.2.2`
-* `plotly 5.23.0` (see installation command below)
-* `pypickle 1.1.0`
-* `scikit-learn 1.5.1` (see installation command below)
-* `scipy 1.14.0`
-* `SQLAlchemy 2.0.32` (see installation command below)
-
-To install the libraries please run these commands in your root directory:
-``pip install -U distfit``
-``pip install flask``
-``pip install plotly==5.23.0``
-``pip install scikit-learn``
-``pip install sqlalchemy``
-
-## Deploy instructions
-1. Run the following commands in the root directory to set up the database and simulations.
-
-    - To run ETL pipeline that cleans data and stores in database
-        `python data/process_data.py data/losses.csv`
-    - To run statistical pipeline that fit frequency and severity probability distributions to data and save the monte carlo simulations
-        `python model/model.py`
-
-2. Go to `app` directory: `cd app`
-
-3. Run your web app: `python run.py`
-
-## Motivation
-The project is useful to automatize the process the Monte Carlo simulations of the aggregated losses for an scenario analysis of any financial risk, as an example, it uses base information as the historical data of losses to give the expected and the catastrofical losses (quantile 0.999). You will see the results in the web app, some important plots of data and simulations will plotted.
-
-## Results
-With the development of this project we can provide a time series of losses which we want to get the monthly expected and catastrophical losses. For this we fit the severity distribution using `distfit` and getting the distribution fitted name, the associated parameters and the p-value; and for frequency we use a Poisson distribution with the monthly frequency mean as parameter. With this distributions a Monte Carlo simulation is performed so we get the monthly measures of losses and its plots in the web app are deployed.
-
-## Acknowledgements
-Special acknoledgements to all Python community who give their knoledgement to contribute to develop tools as this one what I offer to you all. So, please feel you free to use it!
+The total loss distribution is obtained by convolving the frequency and severity distributions. Mathematically, if $F(x)$ represents the cumulative distribution function (CDF) of the frequency distribution and $S(x)$ represents the CDF of the severity distribution, the convolution can be expressed as:
