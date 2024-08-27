@@ -53,12 +53,12 @@ Monte Carlo simulations are used to estimate the aggregate loss distribution by 
 2. Simulate Loss Amounts: For each event, draw random loss amounts from the severity distribution.
 3. Aggregate Loss Calculation: Sum the loss amounts for each simulation run to compute the total loss.
    
-Mathematically, if $N$ represents the number of simulations, $E_{i}$ is the number of events in the $i-th$ simulation, and $\lbrace L_{i, j} \rbrace_{j=1}{E_i}$ are the simulated loss amounts for the $i-th$ simulation, the total loss for the $i-th$ simulation can be expressed as:
+Mathematically, if $N$ represents the number of simulations, $E_{i}$ is the number of events in the $i-th$ simulation, and $\lbrace L_{i, j} \rbrace_{j=1}^{E_i}$ are the simulated loss amounts for the $i-th$ simulation, the total loss for the $i-th$ simulation can be expressed as:
 
 $$T_i = \sum_{j=1}^{E_i} L_{i, j}.$$
 
 The aggregate loss distribution is then approximated by the empirical distribution of $\lbrace T_i \rbrace_{i=1}^{N}$, which represents the total losses over all simulations.
 
-$$\hat{L}(x) = \frac{1}{N} \sum_{i=1}^{N} \mathbb{I}(L_{i} \leq x)$$
+$$\hat{L}(x) = \frac{1}{N} \sum_{i=1}^{N} \mathbb{I}(T_{i} \leq x)$$
 
-where $\mathbb{I}(L_{i} \leq x)$ is an indicator function that equals $1$ if $L_i$ is less than or equal to $x$ and $0$ otherwise. This approximation helps in estimating the probability of various levels of aggregate losses.
+where $\mathbb{I}(T_{i} \leq x)$ is an indicator function that equals $1$ if $T_i$ is less than or equal to $x$ and $0$ otherwise. This approximation helps in estimating the probability of various levels of aggregate losses.
